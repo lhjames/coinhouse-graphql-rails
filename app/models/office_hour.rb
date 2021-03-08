@@ -1,2 +1,0 @@
-class OfficeHour < ApplicationRecord
-end

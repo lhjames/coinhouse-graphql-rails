@@ -6,6 +6,6 @@ module Types
     field :description, String, null: false
     field :attendants, Integer, null: false
     field :duration, Integer, null: false
-    field :date, Types::DateTimeType, null: false
+    field :date, String, null: false
   end
 end
