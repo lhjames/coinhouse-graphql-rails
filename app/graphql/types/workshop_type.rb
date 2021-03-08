@@ -5,7 +5,7 @@ module Types
     field :location, String, null: false
     field :description, String, null: false
     field :attendants, Integer, null: false
-    field :duration, Float, null: true
-    field :date, Types::DateTimeType, null: true
+    field :duration, Integer, null: false
+    field :date, Types::DateTimeType, null: false
   end
 end
