@@ -9,15 +9,18 @@ module Mutations
 
     type Types::MeetingType
 
-    def resolve(name: nil, location: nil, description: nil, attendants: nil, duration: nil, date: nil)
+    def resolve(name: nil, location: nil, description: nil, attendants: nil, duration: nil, date: nil, user: nil)
       Meeting.create!(
         name: name,
         location: location,
         description: description,
         attendants: attendants,
         duration: duration,
-        date: date
+        date: date,
+        user: context[:current_user]
       )
+    rescue ActiveRecord::RecordInvalid => e
+      GraphQL::ExecutionError.new("Invalid input: #{e.record.errors.full_messages.join(', ')}")
     end
   end
 end
