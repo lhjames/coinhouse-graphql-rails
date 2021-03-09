@@ -8,6 +8,6 @@ module Types
     field :duration, Integer, null: false
     field :date, String, null: false
 
-    field :created_by, UserType, null: true
+    field :created_by, UserType, null: true, method: :user
   end
 end
