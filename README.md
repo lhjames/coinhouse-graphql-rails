@@ -77,3 +77,22 @@ mutation {
 }
 }
 ```
+
+### GraphQl query to sign-in an User
+
+`````
+mutation {
+  signinUser(
+    credentials: {
+      email: "lok@gmail.com",
+      password: "1234"
+    }
+  ) {
+    token
+    user {
+      id
+    }
+  }
+}
+````
+`````

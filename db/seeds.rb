@@ -8,5 +8,5 @@ puts '...events seeded!'
 puts "creating users..."
 # User.create!(name: "Lulu", email: "lulu@gmail.com", password: "1234")
 User.create!(name: "Mal", email: "mal@gmail.com", password: "1234")
-User.create!(name: "Will", email: "will@gmail.com", password: "1234")
+User.create!(name: "Lok", email: "lok@gmail.com", password: "1234")
 puts "users created!"
