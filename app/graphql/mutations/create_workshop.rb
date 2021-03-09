@@ -9,10 +9,10 @@ module Mutations
 
     type Types::WorkshopType
 
-    def resolve(description: nil, url: nil)
+    def resolve(name: nil, location: nil, description: nil, attendants: nil, duration: nil, date: nil)
       Workshop.create!(
         name: name,
-        location: location
+        location: location,
         description: description,
         attendants: attendants,
         duration: duration,
