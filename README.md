@@ -34,7 +34,9 @@ Test for Coinhouse: a Rails project with a GraphQL API to manage office hours an
 
 ### GraphQl query to sign-in an user
 
-`````
+Note: please run this query before trying to create an event
+
+```
 mutation {
   signinUser(
     credentials: {
@@ -48,7 +50,7 @@ mutation {
     }
   }
 }
-````
+```
 
 ### GraphQl query to create a workshop once an user is signed-in
 
@@ -103,4 +105,3 @@ mutation {
   }
 }
 ```
-`````
