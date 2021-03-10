@@ -11,7 +11,7 @@ class Resolvers::WorkshopsSearch
   class WorkshopFilter < ::Types::BaseInputObject
     argument :OR, [self], required: false
     argument :description_contains, String, required: false
-    argument :url_contains, String, required: false
+    argument :location_contains, String, required: false
   end
 
   option :filter, type: WorkshopFilter, with: :apply_filter
@@ -23,11 +23,10 @@ class Resolvers::WorkshopsSearch
 
   def normalize_filters(value, branches = [])
     scope = Workshop.all
-    #To search by name of the workshop
+    #To search by elements of the description of the workshop
     scope = scope.where('description LIKE ?', "%#{value[:name_contains]}%") if value[:name_contains]
     #To search by location
     scope = scope.where('description LIKE ?', "%#{value[:location_contains]}%") if value[:location_contains]
-
 
     branches << scope
 

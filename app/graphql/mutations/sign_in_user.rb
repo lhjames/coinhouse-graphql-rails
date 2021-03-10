@@ -2,7 +2,7 @@ module Mutations
   class SignInUser < BaseMutation
     null true
 
-    # getting the credentials with the Auth_provider type...
+    # getting the credentials...
     argument :credentials, Types::AuthProviderCredentialsInput, required: false
 
     field :token, String, null: true
