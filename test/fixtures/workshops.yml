@@ -4,11 +4,7 @@ one:
   name: MyString
   location: MyString
   description: MyText
-<<<<<<< HEAD
   date: 2021-03-08 14:04:49
-=======
-  date: 2021-03-08 11:33:00
->>>>>>> 387e185c18618e5fc2e4446da2041cc45d991a15
   duration: 1.5
   attendants: 1
 
@@ -16,10 +12,6 @@ two:
   name: MyString
   location: MyString
   description: MyText
-<<<<<<< HEAD
   date: 2021-03-08 14:04:49
-=======
-  date: 2021-03-08 11:33:00
->>>>>>> 387e185c18618e5fc2e4446da2041cc45d991a15
   duration: 1.5
   attendants: 1
