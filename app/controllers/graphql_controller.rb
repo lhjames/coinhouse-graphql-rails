@@ -4,7 +4,6 @@ class GraphqlController < ApplicationController
     query = params[:query]
     operation_name = params[:operationName]
     context = {
-      # we need to provide session and current user
       session: session,
       current_user: current_user
     }
@@ -17,9 +16,8 @@ class GraphqlController < ApplicationController
 
   private
 
-  # gets current user from token stored in the session
+  # this method will help us get current_user with the session token
   def current_user
-    # if we want to change the sign-in strategy, this is the place to do it
     return unless session[:token]
 
     crypt = ActiveSupport::MessageEncryptor.new(Rails.application.credentials.secret_key_base.byteslice(0..31))
@@ -30,12 +28,11 @@ class GraphqlController < ApplicationController
     nil
   end
 
-  # Handle form data, JSON body, or a blank value
   def ensure_hash(ambiguous_param)
-    # ...code
+    #WIP
   end
 
   def handle_error_in_development(e)
-    # ...code
+    #WIP
   end
 end

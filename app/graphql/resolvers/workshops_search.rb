@@ -23,8 +23,10 @@ class Resolvers::WorkshopsSearch
 
   def normalize_filters(value, branches = [])
     scope = Workshop.all
+    #To search by name of the workshop
     scope = scope.where('description LIKE ?', "%#{value[:name_contains]}%") if value[:name_contains]
-    scope = scope.where('description LIKE ?', "%#{value[:description_contains]}%") if value[:description_contains]
+    #To search by location
+    scope = scope.where('description LIKE ?', "%#{value[:location_contains]}%") if value[:location_contains]
 
 
     branches << scope
